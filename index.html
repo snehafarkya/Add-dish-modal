@@ -48,6 +48,7 @@
         Add Your Dish
       </button>
     </div>
+  </center>
       <!-- Modal -->
       <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -59,11 +60,39 @@
               </button>
             </div>
             <div class="modal-body">
-                Your Dish <input type="text" name="text" id="text" placeholder="Enter ur name"><br> <br>
-                Prepairing time : <input type="time" name="date" id="date" placeholder="time"> <br><br>
-                Serving for : <input type="number" name="num" id="num"><br><br>
-        
-                Description: <textarea name="textarea" id="tarea" cols="30" rows="10"></textarea> <br><br>
+              <form >
+                <div class="form-group row">
+                  <label for="text" class="col-form-label col-md-2">Your Dish</label>
+                  <div class="col-9">
+              <input type="text" name="text" id="text" placeholder="What's cooking!!" class="form-control offset-1"><br> <br>
+            </div>
+                </div>
+                <div class="form-group row">
+                  <label for="date" class="col-form-label col-md-2">Prepairing time: </label>
+                  <div class="col-9">
+
+                <input type="datetime" name="date" id="date" placeholder="time" class="form-control offset-1"> <br><br>
+              </div>
+                </div>
+                <div class="form-group row">
+                  <label for="num" class="col-form-label col-md-2">Serving for: </label>
+                  <div class="col-9">
+
+              <input type="number" name="num" id="num" class="form-control offset-1"><br><br>
+              </div>
+                </div>
+                <div class="form-group row">
+                  <label for="tarea" class="col-form-label col-md-2">Description: </label>
+                  <div class="col-9">
+
+                  <textarea name="textarea" id="tarea" cols="30" rows="10" class="form-control offset-1"></textarea> <br><br>
+        </div>
+
+             
+                </div>
+                
+
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -89,7 +118,7 @@
                 </div>
             </div>
         </div>
-      </center>
+     
 </body>
 <script>
     function add(){
