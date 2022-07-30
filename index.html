@@ -71,12 +71,20 @@
         .card-body{
           padding: 10px;
         }
+        .navbar-toggler>.close {
+    display:inline;
+    color: #ddd;
+}
+.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
+}
     </style>
 <!-- Navbar -->
 <nav class="navbar navbar-dark navbar-expand-sm d-flex justify-content-center fixed-top">
   <div class="container ">
       <!-- button for toggling the navbar in small screens -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarc">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarc">
+        <span class="my-1 mx-2 close">X</span>
           <span class="navbar-toggler-icon"></span>
       </button>
       <a href="#" class="navbar-brand  fixed  ">
