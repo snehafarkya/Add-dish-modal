@@ -114,23 +114,23 @@
       <ul class="navbar-nav mr-auto">
           <li class="nav-item"> 
               <a href="#" class="nav-link active ">
-                  <span class="fa fa-home fa-lg"> Home</span>
+                   Home
               </a>
           </li>
 
           <li class="nav-item">
               <a href="#" class="nav-link">
-                  <span class="fa fa-info fa-lg"> About</span>
+                  About
               </a>
           </li>
           <li class="nav-item">
               <a href="#" class="nav-link">
-                  <span class="fa fa-list fa-lg"> Menu</span>
+                   Menu
               </a>
           </li>
           <li class="nav-item">
               <a href="#" class="nav-link">
-                  <span class="fa fa-address-card fa-lg"> Contact</span>
+                   Contact
               </a>
           </li>
       </ul>
@@ -245,21 +245,22 @@
     
     }
     function search_items() {
+      searchbar.value='';
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('search');
       
+    
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
           alert("Not found");               
-          
-       
         }
         else {
             alert(" found");     
            
         }
     }
+    
 }
 
     </script>
