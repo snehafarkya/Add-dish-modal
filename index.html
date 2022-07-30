@@ -10,23 +10,34 @@
 <body>
     <style>
         body{
-            background-color: rgba(5, 5, 5, 0.208);
+            background-color: rgba(5, 5, 5, 0.874);
             color: black;
+        }
+        .navbar-brand{
+          font-size: 2em;
         }
         .div{
             display: flex;
             justify-content: center;
         }
+        .scrollable{
+          overflow-y: auto;
+             
+             max-height: 150px;
+        }
         .card{
             margin: 2em auto;
             /* max-width: fit-content;
              */
+             
+             /* overflow-y: auto; */
              width: 500px;
-             word-wrap:ak-word;
+             height: 370px;
+             word-wrap:break-word;
              line-break: auto;
              text-align: left;
             max-height: fit-content ;
-            border: 1px #ddd solid;
+            border: 2px #ddd solid;
             border-radius: 10px;
             background-color: rgba(8, 213, 244, 0.815);
             /* padding: 10px; */
@@ -36,15 +47,61 @@
           margin: 0;
           text-align: center;
           color: floralwhite;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
         }
         .card-body{
           padding: 10px;
         }
     </style>
+<!-- Navbar -->
+<nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+  <div class="container ">
+      <!-- button for toggling the navbar in small screens -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarc">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+     
+      
+      <!-- mr-auto is a utility class, means the content will be pushed as left as possible  -->
+      <div class="collapse navbar-collapse col-5 " id="navbarc">
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> 
+              <a href="#" class="nav-link active ">
+                  <span class="fa fa-home fa-lg"> Home</span>
+              </a>
+          </li>
 
+          <li class="nav-item">
+              <a href="./aboutus.html" class="nav-link">
+                  <span class="fa fa-info fa-lg"> About</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="" class="nav-link">
+                  <span class="fa fa-list fa-lg"> Menu</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="./contactus.html" class="nav-link">
+                  <span class="fa fa-address-card fa-lg"> Contact</span>
+              </a>
+          </li>
+      </ul>
+  </div>
+  <a href="#" class="navbar-brand col-3  ">
+    OhSoYum.
+  </a>
+  <form class="form-inline col-4 d-none d-sm-block">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  </div>
+
+</nav>
 <center>
-  <div class="align-self-center">
-    <button type="button" class="btn btn-primary mt-4" data-toggle="modal" data-target="#exampleModalCenter">
+  <div class="align-self-center col-12 mt-5">
+    <button type="button" class="btn btn-primary mt-5" data-toggle="modal" data-target="#exampleModalCenter">
         Add Your Dish
       </button>
     </div>
@@ -112,7 +169,10 @@
                 <div class="info">
                     <h4>Prepairing time : <span id="time"></span></h4>
                     <h4>Serving for: <span id="people"></span></h4> 
-                    <h4>Description: </h4><p id="desc"></p>
+                    <h4>Description: </h4>
+                    <div class="scrollable">
+                    <p id="desc"></p>
+                  </div>
                   </div>
                 </div>
             </div>
