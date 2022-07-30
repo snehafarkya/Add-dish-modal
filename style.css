@@ -68,6 +68,9 @@
     display:inline;
     color: #ddd;
 }
+
+
+
 .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
     display:none;
 }
