@@ -119,8 +119,8 @@
   </div>
  
   <form class="form-inline d-none d-sm-block">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchbar" aria-label="Search" >
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" onclick="search_animal()" >Search</button>
   </form>
 </div>
 
@@ -189,7 +189,7 @@
 
       </div>
       <!-- card -->
-      <div class="div" id="cards">
+      <div class="div animals" id="cards">
         <div class="card align-self-center mx-2" id="card" >
           <div class="card-header bg-primary">
             <h2  >Dish name: <span id="display" ></span > </h2>
@@ -199,8 +199,8 @@
                     <h4>Prepairing time : <span id="time"></span></h4>
                     <h4>Serving for: <span id="people"></span></h4> 
                     <h4>Description: </h4>
-                    <div class="scrollable">
-                    <p id="desc"></p>
+                    <div class="scrollable ">
+                    <p id="desc" class="animals"></p>
                   </div>
                   </div>
                 </div>
@@ -226,7 +226,21 @@
         
     
     }
- 
+    function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input=input.toLowerCase();
+    let x = document.getElementsByClassName('animals');
+      
+    for (i = 0; i < x.length; i++) { 
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+          alert("Not found");               
+
+        }
+        else {
+            alert(" found");               
+        }
+    }
+}
 
     </script>
 
