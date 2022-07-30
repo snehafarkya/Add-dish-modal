@@ -6,93 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adding modal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- cdn for mark.js -->
-
+  <!-- style -->
+  <link rel="stylesheet" href="style.css">
   </head>
 <body>
-    <style>
-      html{
-        scroll-behavior: smooth;
-
-      }
-        body{
-            background-color: rgba(5, 5, 5, 0.874);
-            color: black;
-        }
-        .navbar{
-          overflow: hidden;
-          background-color: rgba(5, 5, 5, 0.874);
-
-        }
-        .navbar-brand{
-          font-size: 2em;
-        }
-        .div{
-            display: flex;
-            justify-content: center;
-            padding-top: 18em;
-            align-items: center;
-            align-self: center;
-        }
-        #showcard{
-          display: none;
-        }
-        .showbtn{
-          display: flex;
-          padding-top: 1em;
-          justify-content: center;
-          align-items: center;
-        }
-        .scrollable{
-          overflow-y: auto;
-             
-             max-height: 150px;
-        }
-        .card{
-            margin: 2em auto;
-            
-             width: 500px;
-             height: 370px;
-             word-wrap:break-word;
-             line-break: auto;
-             text-align: left;
-            max-height: fit-content ;
-            border: 2px #ddd solid;
-            border-radius: 10px;
-            background-color: rgba(8, 213, 244, 0.815);
-            /* padding: 10px; */
-            display: none;
-        }
-        .card-header{
-          margin: 0;
-          text-align: center;
-          color: floralwhite;
-          border-top-left-radius: 10px;
-          border-top-right-radius: 10px;
-        }
-        .card-body{
-          padding: 10px;
-        }
-        .navbar-toggler>.close {
-    display:inline;
-    color: #ddd;
-}
-.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
-    display:none;
-}
-@media screen and (max-width:700px) {
-  .form{
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-   
-  }
-  #searchbar{
-    width: 60vw;
-  }
-  
-}
-    </style>
+    
 <!-- Navbar -->
 <nav class="navbar navbar-dark navbar-expand-sm d-flex justify-content-center fixed-top">
   <div class="container ">
@@ -147,7 +65,7 @@
     </div>
   </center>
       <!-- Modal -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -156,31 +74,31 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body ">
               <form >
-                <div class="form-group row">
-                  <label for="text" class="col-form-label col-md-2">Your Dish</label>
-                  <div class="col-9 ">
+                <div class="form-group row ">
+                  <label for="text" class="col-form-label col-md-3">Your Dish</label>
+                  <div class="col-8 ">
               <input type="text" name="text" id="text" placeholder="What's cooking!!" class="form-control offset-1"> 
             </div>
                 </div>
                 <div class="form-group row">
-                  <label for="date" class="col-form-label col-md-2">Prepairing time: </label>
-                  <div class="col-9">
+                  <label for="date" class="col-form-label col-md-3">Prepairing time: </label>
+                  <div class="col-8">
 
                 <input type="datetime" name="date" id="date" placeholder="time" class="form-control offset-1"> 
               </div>
                 </div>
                 <div class="form-group row">
-                  <label for="num" class="col-form-label col-md-2">Serving for: </label>
-                  <div class="col-9">
+                  <label for="num" class="col-form-label col-md-3">Serving for: </label>
+                  <div class="col-8">
 
               <input type="number" name="num" id="num" class="form-control offset-1">
               </div>
                 </div>
                 <div class="form-group row">
-                  <label for="tarea" class="col-form-label col-md-2">Description: </label>
-                  <div class="col-9">
+                  <label for="tarea" class="col-form-label col-md-3">Description: </label>
+                  <div class="col-8">
 
                   <textarea name="textarea" id="tarea" cols="30" rows="10" class="form-control offset-1"></textarea> 
         </div>
@@ -252,7 +170,7 @@
           alert("Not found");               
         }
         else {
-            alert(" found");     
+            alert(searchbar.value + " found");     
            
         }
     }
