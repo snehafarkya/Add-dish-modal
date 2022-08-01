@@ -119,5 +119,7 @@ label{
   #searchbar{
     width: 60vw;
   }
-  
+  i{
+    font-size: 16px;
+  }
 }
