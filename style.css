@@ -20,7 +20,7 @@
           -webkit-text-fill-color: transparent;
         }
         .div{
-            display: flex;
+            /* display: flex; */
             justify-content: center;
             padding-top: 18em;
             align-items: center;
@@ -44,13 +44,13 @@
           align-items: center;
         }
        
-        #desc{
+        /* #desc{
           font-size: 1.1em;
           background: -webkit-linear-gradient(130deg, rgb(243, 3, 3), rgb(4, 4, 219));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-weight: 600;
-        }
+        } */
         .navbar-toggler>.close {
     display:inline;
     color: #ddd;
@@ -80,28 +80,6 @@ label{
 .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
     display:none;
 }
-@media screen and (max-width:700px) {
-  .form{
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-   
-  }
-  #searchbar{
-    width: 60vw;
-  }
-  i{
-    font-size: 16px;
-  }
-  thead{
-    display: grid;
-  grid-template-columns: auto ;
-  margin-top: 1em;
-  column-gap: 1em;
-  }
-}
-
-
 
 /* table css */
 table{
@@ -129,7 +107,7 @@ tr{
   font-weight: 700;
   padding: 1rem 0.5rem 0.5rem 1rem;
 /* background-color: transparentize( white, 0.15 ); */
-box-shadow: 0 0 1rem transparentize( black, 0.9 );
+
 box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
         0 2px 2px rgba(0,0,0,0.11), 
         0 4px 4px rgba(0,0,0,0.11), 
@@ -188,3 +166,50 @@ td:nth-child(4){
        max-height: 150px;
   
 }
+
+@media screen and (max-width:700px) and (min-width:300px) {
+  body{
+    width: 100vw;
+  }
+  .form{
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+   
+  }
+  #searchbar{
+    width: 60vw;
+  }
+  i{
+    font-size: 16px;
+  }
+  .div{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  table{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  thead{
+    display: grid;
+  grid-template-columns: auto ;
+  margin-top: 1em;
+  row-gap: 1em;
+  width: 300px;
+  margin-left: 0;
+
+  }
+  tr{
+    width: 80vw;
+    margin-left: 0;
+    /* padding-left: 0; */
+  }
+td:nth-child(1){
+  font-size: 1.2em;
+}
+}
+
+
+
+
