@@ -106,7 +106,7 @@ tr{
   font-size: 1em;
   color: black;
   font-weight: 700;
-  padding: 1rem 0.5rem 0.5rem 1rem;
+  padding: 0.5rem;
 /* background-color: transparentize( white, 0.15 ); */
 
 box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
@@ -149,12 +149,13 @@ td:nth-child(2)::before{
   content: "Serving for: ";
 
 }
+
 td:nth-child(2){
 max-height: fit-content;
-padding-bottom: 4px;
+/* padding-bottom: 4px; */
 }
 td:nth-child(3){
-padding-bottom: 4px;
+/* padding-bottom: 4px; */
 
   max-height: fit-content;
 }
