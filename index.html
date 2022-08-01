@@ -52,7 +52,7 @@
   </div>
  
   <form class="form-inline form ">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" id="searchbar" aria-label="Search" >
+    <input class="form-control mr-sm-2" tabindex="0" type="search" placeholder="Search" id="searchbar" aria-label="Search" data-toggle="popover" data-trigger="hover" title="Add a Dish First" data-content="Then search for words" data-placement="bottom" >
     <button class="btn btn-outline-info my-2 my-sm-0" type="submit" onclick="search_items()" >Search</button>
     
   </form>
@@ -77,7 +77,7 @@
               </button>
             </div>
             <div class="modal-body ">
-              <form >
+              <form id="myForm" name="myform">
                 <div class="form-group row ">
                   <label for="text" class="col-form-label col-md-3">Your Dish</label>
                   <div class="col-8 ">
@@ -154,6 +154,9 @@
         </div>
 </body>
 <script>
+$('.popover-dismiss').popover({
+  trigger: 'hover'
+})
     // function add(){
     //     var card = document.getElementById("card").style.display="block";
     //     var str = document.getElementById("text").value;
@@ -185,6 +188,7 @@ var n = 1;
 var x = 0;
 
 function add(){
+  document.getElementsByTagName['input'].value=' ';
   document.getElementById("showcard").style.display="block";
     var card = document.getElementById("cards").style.display="block";
         
@@ -227,6 +231,8 @@ function add(){
     people.innerHTML += ` <i class="fa-solid fa-users-rays"></i>`;
 
   }
+
+  
 }
 
 
