@@ -14,6 +14,10 @@
         }
         .navbar-brand{
           font-size: 2em;
+          font-weight: 500;
+          background: -webkit-linear-gradient(180deg,#bcd3e7, rgb(239, 106, 106),rgb(240, 87, 217), rgb(126, 126, 233),#bcd3e7);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
         .div{
             display: flex;
@@ -68,7 +72,23 @@
     display:inline;
     color: #ddd;
 }
+.modal-content{
+  background-color: #d4e2ef;
+}
+input[type=text],input[type=datetime],input[type=number],#tarea{
+  background-color: transparent;
+  border-top:none  ;
+  border-left:none  ;
+  border-right:none  ;
+  border-bottom: 2px solid darkblue;
+  outline: none;
+  border-radius: 0px;
 
+}
+label{
+  color: darkblue;
+  font-weight: 500;
+}
 
 
 .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
