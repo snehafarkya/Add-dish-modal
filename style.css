@@ -25,54 +25,25 @@
             padding-top: 18em;
             align-items: center;
             align-self: center;
+            background-color: rgba(5, 5, 5, 0.874);
+
         }
         #showcard{
           display: none;
+          background-color: none;
         }
         #showcard a:hover{
           text-decoration: none;
         }
         .showbtn{
           display: flex;
+          background-color: rgba(5, 5, 5, 0.874);
+
           padding-top: 1em;
           justify-content: center;
           align-items: center;
         }
-        .scrollable{
-          overflow-y: auto;
-             
-             max-height: 150px;
-        }
-        .card{
-            margin: 2em auto;
-            box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
-              0 2px 2px rgba(0,0,0,0.11), 
-              0 4px 4px rgba(0,0,0,0.11), 
-              0 8px 8px rgba(0,0,0,0.11), 
-              0 16px 16px rgba(0,0,0,0.11), 
-              0 32px 32px rgba(0,0,0,0.11);
-             width: 500px;
-             height: 370px;
-             word-wrap:break-word;
-             line-break: auto;
-             text-align: left;
-            max-height: fit-content ;
-            border: 5px rgba(0, 0, 0, 0.226) solid;
-            background-color: rgba(149, 223, 234, 0.815);
-            /* padding: 10px; */
-            display: none;
-        }
-        .card-header{
-          margin: 0;
-          text-align: center;
-          color: floralwhite;
-          
-          border-top-left-radius: 16px;
-          border-top-right-radius: 16px;
-        }
-        .card-body{
-          padding: 10px;
-        }
+       
         #desc{
           font-size: 1.1em;
           background: -webkit-linear-gradient(130deg, rgb(243, 3, 3), rgb(4, 4, 219));
@@ -122,4 +93,98 @@ label{
   i{
     font-size: 16px;
   }
+  thead{
+    display: grid;
+  grid-template-columns: auto ;
+  margin-top: 1em;
+  column-gap: 1em;
+  }
+}
+
+
+
+/* table css */
+table{
+  display: flex;
+  justify-content: center;
+  background-color: none;
+}
+thead{
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5em;
+  border: none;
+  margin: 5em;
+  background-color: none;
+
+}
+tr{
+  background-color: cadetblue;
+  /* padding: 1em; */
+  display: grid;
+  grid-template-columns: auto;
+  column-gap: 2em;
+  font-size: 1em;
+  color: black;
+  font-weight: 700;
+  padding: 1rem 0.5rem 0.5rem 1rem;
+/* background-color: transparentize( white, 0.15 ); */
+box-shadow: 0 0 1rem transparentize( black, 0.9 );
+box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+        0 2px 2px rgba(0,0,0,0.11), 
+        0 4px 4px rgba(0,0,0,0.11), 
+        0 8px 8px rgba(0,0,0,0.11), 
+        0 16px 16px rgba(0,0,0,0.11), 
+        0 32px 32px rgba(0,0,0,0.11);
+       width: 500px;
+       height: 370px;
+       word-wrap:break-word;
+       line-break: auto;
+       text-align: left;
+      max-height: fit-content ;
+      border: 5px rgba(0, 0, 0, 0.226) solid;
+      /* background-color: rgba(149, 223, 234, 0.815); */
+
+
+
+}
+tr:nth-child(1){
+  display: none;
+}
+td:nth-child(1){
+text-align: center;
+  margin: 0;
+  padding: 1em 3em;
+  background-color: azure;
+  font-size: 2em;
+  height: fit-content;
+}
+td:nth-child(1)::before{
+  content: "Dish Name: ";
+
+}
+td:nth-child(2)::before{
+  content: "Prepairing time : ";
+
+}td:nth-child(3)::before{
+  content: "Serving for ";
+
+}
+td:nth-child(2){
+max-height: fit-content;
+padding-bottom: 4px;
+}
+td:nth-child(3){
+padding-bottom: 4px;
+
+  max-height: fit-content;
+}
+td:nth-child(4){
+  font-size: 1em;
+  color: darkblue;
+  font-weight: 500;
+  overflow-y: auto;
+       
+       max-height: 150px;
+  
 }

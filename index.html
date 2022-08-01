@@ -124,7 +124,8 @@
       </div>
       <!-- card -->
       <div class="div search" id="cards">
-        <div class="card align-self-center mx-2" id="card" >
+        <div class=" align-self-center mx-2" id="card" >
+          <!--
           <div class="card-header bg-primary">
             <h2  >Dish name: <span id="display" ></span > </h2>
               </div>
@@ -137,45 +138,98 @@
                     <p id="desc" ></p>
                   </div>
                   </div>
-                </div>
-            </div>
+                
+             -->
+            <table  id="show">
+              <thead>
+                  <tr>
+                      <td>
+      
+                      </td>
+                      
+                  </tr>
+              </thead>
+          </table>
         </div>
-     
+        </div>
 </body>
 <script>
-    function add(){
-        var card = document.getElementById("card").style.display="block";
-        var str = document.getElementById("text").value;
-        var descc = document.getElementById("tarea").value;
-        var date = document.getElementById("date").value;
-        var num = document.getElementById("num").value;
+    // function add(){
+    //     var card = document.getElementById("card").style.display="block";
+    //     var str = document.getElementById("text").value;
+    //     var descc = document.getElementById("tarea").value;
+    //     var date = document.getElementById("date").value;
+    //     var num = document.getElementById("num").value;
 
     
     
-        document.getElementById("display").innerHTML=str;
-        document.getElementById("time").innerHTML=date;
-        document.getElementById("people").innerHTML=num;
-        document.getElementById("desc").innerHTML=descc;
-        document.getElementById("showcard").style.display="block";
+    //     document.getElementById("display").innerHTML=str;
+    //     document.getElementById("time").innerHTML=date;
+    //     document.getElementById("people").innerHTML=num;
+    //     document.getElementById("desc").innerHTML=descc;
+    //     document.getElementById("showcard").style.display="block";
     
         
-    if(num == '1'){
-      people.innerHTML += ` <i class="fa-solid fa-person"></i>`;
-    }
-    else if(num == '2')
-    {
-      people.innerHTML += ` <i class="fa-solid fa-people-simple"></i>`;
-    }
-    else if(num == "3")
-    {
-      people.innerHTML += ` <i class="fa-solid fa-users"></i>`;
-    }
-    else{
-      people.innerHTML += ` <i class="fa-solid fa-users-rays"></i>`;
 
-    }
 
-    }
+    // }
+
+    
+
+var list1 = [];
+var list2= [];
+var list3= [];
+var list4=[];
+
+var n = 1;
+var x = 0;
+
+function add(){
+  document.getElementById("showcard").style.display="block";
+    var card = document.getElementById("card").style.display="block";
+        
+  var AddRown = document.getElementById('show');
+  var NewRow = AddRown.insertRow(n);
+
+  list1[x] = document.getElementById("text").value;
+  list2[x] = document.getElementById("date").value;
+  list3[x] = document.getElementById("num").value;
+  list4[x] = document.getElementById("tarea").value;
+
+
+
+  var cel1 = NewRow.insertCell(0);
+  var cel2 = NewRow.insertCell(1);
+  var cel3 = NewRow.insertCell(2);
+  var cel4 = NewRow.insertCell(3);
+  
+
+  cel1.innerHTML = list1[x];
+  cel2.innerHTML = list2[x];
+  cel3.innerHTML = list3[x];
+  cel4.innerHTML = list4[x];
+  
+
+  n++;
+  x++;
+  if(num == '1'){
+    people.innerHTML += ` <i class="fa-solid fa-person"></i>`;
+  }
+  else if(num == '2')
+  {
+    people.innerHTML += ` <i class="fa-solid fa-people-simple"></i>`;
+  }
+  else if(num == "3")
+  {
+    people.innerHTML += ` <i class="fa-solid fa-users"></i>`;
+  }
+  else{
+    people.innerHTML += ` <i class="fa-solid fa-users-rays"></i>`;
+
+  }
+}
+
+
     function search_items() {
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
@@ -198,9 +252,63 @@
     
 }
 
-
     </script>
+<script>
 
+  var list1 = [];
+  var list2= [];
+  var list3= [];
+  var list4=[];
+
+  var n = 1;
+  var x = 0;
+
+  function add(){
+    document.getElementById("showcard").style.display="block";
+      var card = document.getElementById("card").style.display="block";
+          
+    var AddRown = document.getElementById('show');
+    var NewRow = AddRown.insertRow(n);
+
+    list1[x] = document.getElementById("text").value;
+    list2[x] = document.getElementById("date").value;
+    list3[x] = document.getElementById("num").value;
+    list4[x] = document.getElementById("tarea").value;
+
+  
+
+    var cel1 = NewRow.insertCell(0);
+    var cel2 = NewRow.insertCell(1);
+    var cel3 = NewRow.insertCell(2);
+    var cel4 = NewRow.insertCell(3);
+    
+
+    cel1.innerHTML = list1[x];
+    cel2.innerHTML = list2[x];
+    cel3.innerHTML = list3[x];
+    cel4.innerHTML = list4[x];
+    
+
+    n++;
+    x++;
+    if(num == '1'){
+      people.innerHTML += ` <i class="fa-solid fa-person"></i>`;
+    }
+    else if(num == '2')
+    {
+      people.innerHTML += ` <i class="fa-solid fa-people-simple"></i>`;
+    }
+    else if(num == "3")
+    {
+      people.innerHTML += ` <i class="fa-solid fa-users"></i>`;
+    }
+    else{
+      people.innerHTML += ` <i class="fa-solid fa-users-rays"></i>`;
+
+    }
+  }
+
+</script>
 <!-- bootstrap js cdn -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
