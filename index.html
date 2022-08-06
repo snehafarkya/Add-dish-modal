@@ -249,14 +249,15 @@ function add(){
     
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                srch=srch.append(input , " not found");
-      searchbar.value='';
-      srch.value='';
+                srch=srch.append(input , " not found " );
+                searchbar.value='';
+               
+      
 
         }
         else {
-          srch=srch.append(input," found");   
-      searchbar.value='';srch.value='';
+          srch=srch.append(input," found ");   
+          searchbar.value='';
 
            
         }
