@@ -52,6 +52,19 @@
           -webkit-text-fill-color: transparent;
           font-weight: 600;
         } */
+
+        /* show results css */
+        .search-results{
+          display: flex;
+          justify-content: center;
+          background-color: inherit;
+          padding-top: 2em;
+        }
+        #srch{
+          color: white;
+          display: none;
+          font-size: 1.2em;
+        }
         .navbar-toggler>.close {
     display:inline;
     color: #ddd;
@@ -147,29 +160,46 @@ td:nth-child(2)::before{
 
 }td:nth-child(3)::before{
   content: "Serving for: ";
+  
+
+}
+td:nth-child(4)::before{
+  content: "Description: ";
+  color: black;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 1.1em;
 
 }
 
 td:nth-child(2){
 max-height: fit-content;
+height: fit-content;
+font-size: 1.1em;
+
 /* padding-bottom: 4px; */
 }
 td:nth-child(3){
 /* padding-bottom: 4px; */
+height: fit-content;
+font-size: 1.1em;
 
   max-height: fit-content;
 }
 td:nth-child(4){
   font-size: 1em;
-  background: -webkit-linear-gradient(130deg, rgb(243, 3, 3), rgb(4, 4, 219));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-  overflow-y: auto;
-       
-       max-height: 150px;
+  color: lightcyan;
+  font-weight: 500;
+  float: inline-end;
+  overflow-y: scroll;
+  visibility:visible;
+  max-height: 150px;
+  letter-spacing: 0.1em;
+
   
 }
+
+
 
 @media screen and (max-width:700px)  {
  

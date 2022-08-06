@@ -122,6 +122,9 @@
         <button type="button" class="btn btn-info " id="showcard"  > <a href="#cards" class="text-white text-decoration-none">Show Card</a> </button>
 
       </div>
+      <div class="search-results">
+          <h3 id="srch"></h3>
+      </div>
       <!-- card -->
       <div class="div search" id="cards">
         <div class=" align-self-center mx-2" id="card" >
@@ -237,19 +240,21 @@ function add(){
 
 
     function search_items() {
+    var search = document.getElementById("srch").style.display="block";
+
     let input = document.getElementById('searchbar').value
     input=input.toLowerCase();
     let x = document.getElementsByClassName('search');
-      
+    var srch = document.getElementById("srch");
     
     for (i = 0; i < x.length; i++) { 
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
-          alert("Not found");        
+                srch=srch.append(input , " not found");
       searchbar.value='';
 
         }
         else {
-            alert( " found");    
+          srch=srch.append(input," found");   
       searchbar.value='';
 
            
@@ -313,6 +318,7 @@ function add(){
 
     }
   }
+
 
 </script>
 <!-- bootstrap js cdn -->
