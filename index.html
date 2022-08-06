@@ -251,11 +251,12 @@ function add(){
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
                 srch=srch.append(input , " not found");
       searchbar.value='';
+      srch.value='';
 
         }
         else {
           srch=srch.append(input," found");   
-      searchbar.value='';
+      searchbar.value='';srch.value='';
 
            
         }
