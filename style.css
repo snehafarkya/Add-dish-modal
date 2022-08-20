@@ -111,7 +111,7 @@ thead{
 
 }
 tr{
-  background-color: cadetblue;
+  background-color: #bcd3e7;
   /* padding: 1em; */
   display: grid;
   grid-template-columns: auto;
@@ -120,6 +120,7 @@ tr{
   color: black;
   font-weight: 700;
   padding: 0.5rem;
+  border-radius: 12px;
 /* background-color: transparentize( white, 0.15 ); */
 
 box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
@@ -134,7 +135,7 @@ box-shadow: 0 1px 1px rgba(0,0,0,0.11),
        line-break: auto;
        text-align: left;
       max-height: fit-content ;
-      border: 5px rgba(0, 0, 0, 0.226) solid;
+      /* border: 5px rgba(0, 0, 0, 0.226) solid; */
       /* background-color: rgba(149, 223, 234, 0.815); */
 
 
@@ -145,30 +146,41 @@ tr:nth-child(1){
 }
 td:nth-child(1){
 text-align: center;
-  margin: 0;
+  margin: -8px;
   padding: 1em 3em;
-  background-color: azure;
-  font-size: 2em;
+  background-color: rgb(113, 24, 237);
+  font-size: 1.8em;
   height: fit-content;
+  border-radius: 12px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 100px;
+  color: #bcd3e7; 
+  margin-bottom: 10px;
+  filter: drop-shadow(2px 2px 8px rgb(27, 26, 26));
 }
 td:nth-child(1)::before{
-  content: "Dish Name: ";
+  content: "Dish Name : "; 
+  color: #bcd3e7;
 
 }
 td:nth-child(2)::before{
   content: "Prepairing time : ";
+  font-size: 1.15em;
+
 
 }td:nth-child(3)::before{
   content: "Serving for: ";
+  font-size: 1.2em;
   
 
 }
 td:nth-child(4)::before{
   content: "Description: ";
+  word-wrap: break-word;
   color: black;
   font-weight: 700;
   letter-spacing: 0;
-  font-size: 1.1em;
+  font-size: 1.2em;
 
 }
 
@@ -188,7 +200,7 @@ font-size: 1.1em;
 }
 td:nth-child(4){
   font-size: 1em;
-  color: lightcyan;
+  color: rgb(113, 24, 237);
   font-weight: 500;
   float: inline-end;
   overflow-y: scroll;
